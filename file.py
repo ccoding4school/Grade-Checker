@@ -5,28 +5,31 @@ studentPoints = False
 maxPoints = False
 categoryWeight = False
 
-print("DG")
+print("DG\n------")
 studentPoints = int(input("Student Points: "))
 maxPoints = int(input("Max Points: "))
 categoryWeight = int(input("Category Weight: "))
+print("")
 
 studentPoints2 = False
 maxPoints2 = False
 categoryWeight2 = False
 
-print("AG")
+print("AG\n------")
 studentPoints2 = int(input("Student Points: "))
 maxPoints2 = int(input("Max Points: "))
 categoryWeight2 = int(input("Category Weight: "))
+print("")
 
 studentPoints3 = False
 maxPoints3 = False
 categoryWeight3 = False
 
-print("MG")
+print("MG\n------")
 studentPoints3 = int(input("Student Points: "))
 maxPoints3 = int(input("Max Points: "))
 categoryWeight3 = int(input("Category Weight: "))
+print("\n")
 
 percent = studentPoints / maxPoints
 percent2 = studentPoints2 / maxPoints2
