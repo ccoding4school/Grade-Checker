@@ -1,5 +1,4 @@
 # Grade Checker
-# If I can find a better way to do this, I will update it
 # 12/14/2021
 
 studentPoints = False
