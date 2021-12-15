@@ -36,4 +36,7 @@ categoryPoints = percent * categoryWeight
 categoryPoints2 = percent2 * categoryWeight2
 categoryPoints3 = percent3 * categoryWeight3
 
+print("Your DG is: " + str(percent * 100))
+print("Your AG is: " + str(percent2 * 100))
+print("Your MG is: " + str(percent3 * 100))
 print("Your grade is: " + str(categoryPoints + categoryPoints2 + categoryPoints3))
