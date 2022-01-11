@@ -1,45 +1,43 @@
 # Grade Checker
-# 12/14/2021
+# Updated 1/10/2022
 
-studentPoints = False
-maxPoints = False
-categoryWeight = False
+print("DG")
+S1 = input("Scores (Ex. 100,97,88): ")
+CW1 = int(input("Category Weight: "))
 
-print("DG\n------")
-studentPoints = int(input("Student Points: "))
-maxPoints = int(input("Max Points: "))
-categoryWeight = int(input("Category Weight: "))
-print("")
+print("\nAG")
+S2 = input("Scores (Ex. 95,97,89): ")
+CW2 = int(input("Category Weight: "))
 
-studentPoints2 = False
-maxPoints2 = False
-categoryWeight2 = False
+print("\nMG")
+S3 = input("Scores (Ex. 90,93,98): ")
+CW3 = int(input("Category Weight: "))
 
-print("AG\n------")
-studentPoints2 = int(input("Student Points: "))
-maxPoints2 = int(input("Max Points: "))
-categoryWeight2 = int(input("Category Weight: "))
-print("")
+def split(string):
+    list = []
+    list = string.split(",")
+    return list
 
-studentPoints3 = False
-maxPoints3 = False
-categoryWeight3 = False
+DG = split(S1)
+AG = split(S2)
+MG = split(S3)
 
-print("MG\n------")
-studentPoints3 = int(input("Student Points: "))
-maxPoints3 = int(input("Max Points: "))
-categoryWeight3 = int(input("Category Weight: "))
-print("\n")
+def percent(list):
+    score = 0
+    maxScore = 100 * len(list)
+    for i in range(len(list)):
+        score += int(list[i])
+    return score / maxScore
 
-percent = studentPoints / maxPoints
-percent2 = studentPoints2 / maxPoints2
-percent3 = studentPoints3 / maxPoints3
+def gradeChecker():
+    global CW1
+    global CW2
+    global CW3
 
-categoryPoints = percent * categoryWeight
-categoryPoints2 = percent2 * categoryWeight2
-categoryPoints3 = percent3 * categoryWeight3
+    CP1 = percent(DG) * CW1
+    CP2 = percent(AG) * CW2
+    CP3 = percent(MG) * CW3
 
-print("Your DG is: " + str(percent * 100))
-print("Your AG is: " + str(percent2 * 100))
-print("Your MG is: " + str(percent3 * 100))
-print("Your grade is: " + str(categoryPoints + categoryPoints2 + categoryPoints3))
+    print("\nYour grade is: " + str(CP1 + CP2 + CP3))
+
+gradeChecker()
